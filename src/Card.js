@@ -1,20 +1,37 @@
+// Card.js
 import React from 'react';
 
-// Card 컴포넌트는 이미지 URL과 클릭 이벤트 핸들러를 props로 받습니다.
-function Card({ imageUrl, sizeW, sizeH, onClick }) {
-    const cardStyle = {
-        backgroundImage: `url(/images/${imageUrl})`,
-        backgroundSize: 'cover',
-        width: `${sizeW}px`, // 너비
-        height: `${sizeH}px`, // 높이
-        cursor: 'pointer', // 마우스 오버 시 커서 변경
-        borderRadius: '10px', // 둥근 모서리 효과
-        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)' // 그림자 효과
+function Card({ card, selectMode, isSelected, onCheckChange, onCardClick }) {
+    
+    const handleCheckboxClick = (e) => {
+        e.stopPropagation(); // 이벤트 버블링을 중지합니다.
+        if (selectMode) {
+            onCheckChange(card.id); // 상위 컴포넌트로 카드 ID 전달
+        }
     };
+
+    const handleCardClick = (e) => {
+        e.stopPropagation(); // 선택 모드가 아닐 때도 이벤트 버블링을 중지합니다.
+        if (selectMode) {
+            onCheckChange(card.id); // 선택 모드일 때 카드 선택 상태 토글
+        } else {
+            onCardClick(card); // 선택 모드가 아닐 때 카드 클릭 동작 처리
+        }
+    };
+
     return (
-        <div className="bg-gray-200 rounded mx-auto w-full h-full flex items-center justify-center transform transition-transform duration-500 hover:scale-110 cursor-pointer my-2"
-        style={cardStyle}
-        onClick={onClick}>
+        <div className={`card ${isSelected ? 'selected' : ''}`} onClick={handleCardClick}>
+            <img src={`/images/${card.image_front}`} alt="Card" style={{ width: '100%', height: 'auto' }} />
+            {selectMode && (
+                <div className="checkbox-container" onClick={handleCheckboxClick}>
+                    <input 
+                        style={{width:'100%'}}
+                        type="checkbox" 
+                        checked={isSelected} 
+                        readOnly // 이것은 컴포넌트 내에서 상태를 변경하지 않으므로 readOnly로 설정합니다.
+                    />
+                </div>
+            )}
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function RandomModal({ isOpen, setIsOpen, deck }) {
+function SelectedModal({ isOpen, setIsOpen, deck }) {
     // deck 배열 내 각 카드에 대한 로컬 상태를 만듭니다. 
     // 이 상태는 카드의 앞면과 뒷면을 토글하기 위해 사용됩니다.
     const [selectedCards, setSelectedCards] = useState([]);
@@ -40,4 +40,4 @@ function RandomModal({ isOpen, setIsOpen, deck }) {
     );
 }
 
-export default RandomModal;
+export default SelectedModal;

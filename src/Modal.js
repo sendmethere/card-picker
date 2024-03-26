@@ -49,7 +49,7 @@ function Modal({ isOpen, setIsOpen, card }) {
                 </div>
             </div>
             <div className='flex justify-center mt-4' onClick={(e) => e.stopPropagation()}>
-            <button className="bg-white p-2 mx-2 rounded" onClick={toggleCardSide}>뜻 보기</button>
+            <button className="maple-story bg-white p-2 mx-2 rounded" onClick={toggleCardSide}>뒤집기</button>
             </div>
         </div>
     ) : null;
