@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/card-picker/static/css/main.122f4dcd.css",
-    "main.js": "/card-picker/static/js/main.59fca3d8.js",
+    "main.js": "/card-picker/static/js/main.6aae2578.js",
     "static/js/453.ad33aaf1.chunk.js": "/card-picker/static/js/453.ad33aaf1.chunk.js",
     "static/media/Maplestory OTF Bold.otf": "/card-picker/static/media/Maplestory OTF Bold.914d802a2a94c180d332.otf",
     "static/media/Maplestory OTF Light.otf": "/card-picker/static/media/Maplestory OTF Light.d2110cb8b8de5224831e.otf",
     "index.html": "/card-picker/index.html",
     "main.122f4dcd.css.map": "/card-picker/static/css/main.122f4dcd.css.map",
-    "main.59fca3d8.js.map": "/card-picker/static/js/main.59fca3d8.js.map",
+    "main.6aae2578.js.map": "/card-picker/static/js/main.6aae2578.js.map",
     "453.ad33aaf1.chunk.js.map": "/card-picker/static/js/453.ad33aaf1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.122f4dcd.css",
-    "static/js/main.59fca3d8.js"
+    "static/js/main.6aae2578.js"
   ]
 }
