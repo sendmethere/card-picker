@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card.open {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.card-ratio {
+  position: relative;
+  width: 100%;
+}
+.card-ratio::before {
+  content: '';
+  display: block;
+  padding-top: 150%;  /* 세로 너비를 가로의 1.5배로 설정 */
+}
+.card-ratio-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s forwards; /* 'forwards' 키워드 유지 */
+}
+
+.animate-fadeOut {
+  animation: fadeOut 0.5s forwards; /* 'forwards' 키워드 유지 */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.95); }
+}
