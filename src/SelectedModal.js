@@ -31,7 +31,7 @@ function SelectedModal({ isOpen, setIsOpen, deck }) {
                 <div className="flex flex-wrap justify-center">
                     {selectedCards.map((card, index) => (
                         <div key={index} className="m-1 cursor-pointer" onClick={() => toggleCard(index)}  style={{ width: `${90/selectedCards.length}%`}}>
-                            <img src={`/images/${card.showBack ? card.image_back : card.image_front}`} alt="Card" />
+                            <img src={`${process.env.PUBLIC_URL}/images/${card.showBack ? card.image_back : card.image_front}`} alt="Card" />
                         </div>
                     ))}
                 </div>

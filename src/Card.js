@@ -21,7 +21,7 @@ function Card({ card, selectMode, isSelected, onCheckChange, onCardClick }) {
 
     return (
         <div className={`card ${isSelected ? 'selected' : ''}`} onClick={handleCardClick}>
-            <img src={`/images/${card.image_front}`} alt="Card" style={{ width: '100%', height: 'auto' }} />
+            <img src={`${process.env.PUBLIC_URL}/images/${card.image_front}`} alt="Card" style={{ width: '100%', height: 'auto' }} />
             {selectMode && (
                 <div className="checkbox-container" onClick={handleCheckboxClick}>
                     <input 

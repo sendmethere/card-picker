@@ -15,7 +15,7 @@ function Modal({ isOpen, setIsOpen, card }) {
     };
 
     const cardStyle = {
-        backgroundImage: `url(/images/${showBack ? card.image_back : card.image_front})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/images/${showBack ? card.image_back : card.image_front})`,
         backgroundSize: 'cover',
         width: `${card.image_size_w*card.zoom_ratio}px`,
         height: `${card.image_size_h*card.zoom_ratio}px`,
