@@ -184,8 +184,8 @@ function App() {
                 )}
                 {selectMode && (
                     <>
-                        <button onClick={handleShowSelected} className="bg-[#DAE6AA] text-[#53A347] maple-story text-white p-2 mx-2 rounded">선택보기</button>
-                        <button onClick={handleCancelSelected} className="bg-[#F5DDE7] text-[#DD74A5] maple-story text-white p-2 mx-2 rounded">선택취소</button>
+                        <button onClick={handleShowSelected} className="bg-[#DAE6AA] text-[#53A347] maple-story p-2 mx-2 rounded">선택보기</button>
+                        <button onClick={handleCancelSelected} className="bg-[#F5DDE7] text-[#DD74A5] maple-story p-2 mx-2 rounded">선택취소</button>
                     </>
       )}
     </div>
