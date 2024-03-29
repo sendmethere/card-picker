@@ -7,8 +7,7 @@ function SelectedModal({ isOpen, setIsOpen, deck }) {
 
     // isOpen이나 deck이 변경될 때마다 selectedCards 상태를 초기화합니다.
     useEffect(() => {
-        // deck 내의 모든 카드에 대해 showBack 속성을 false로 설정하여 초기화합니다.
-        setSelectedCards(deck.map(card => ({ ...card, showBack: false })));
+        setSelectedCards(deck.map(card => ({ ...card, showBack: false })))
     }, [deck, isOpen]);
 
     // 사용자가 특정 카드를 클릭하면 그 카드의 showBack 속성을 토글합니다.
@@ -20,13 +19,17 @@ function SelectedModal({ isOpen, setIsOpen, deck }) {
         );
     };
 
+    const closeModal = () => {
+        setIsOpen(false);
+    };
+
     // 모달이 열려있지 않거나 선택된 카드가 없으면 아무것도 렌더링하지 않습니다.
     if (!isOpen || selectedCards.length === 0) {
         return null;
     }
 
     return (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50" onClick={() => setIsOpen(false)}>
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50" onClick={closeModal}>
             <div className="modal-content bg-white rounded-lg shadow-lg p-5 m-5" onClick={e => e.stopPropagation()}>
                 <div className="flex flex-wrap justify-center">
                     {selectedCards.map((card, index) => (

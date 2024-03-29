@@ -3,10 +3,13 @@ import Card from './Card';
 import Modal from './Modal';
 import SelectedModal from './SelectedModal';
 import cardData from './cards.json';
+import playSoundEffect from './Sound';
 
 import ToggleSwitch from './ToggleSwitch';
 import './App.css';
 import './ToggleSwitch.css';
+
+import {loadStateFromLocalStorage, saveStateToLocalStorage} from './Local';
 
 const cardSets = [
   {no: 1, title: '마음을 열어주는 감정카드', cardSetName: 'emotion'},
@@ -14,29 +17,30 @@ const cardSets = [
   {no: 3, title: '가치카드 - 공동체', cardSetName: 'value_community'},
   {no: 4, title: '가치카드 - 우리', cardSetName: 'value_we'},
   {no: 5, title: '낱말카드', cardSetName: 'words'},
-  {no: 6, title: '초성퀴즈 - 고학년', cardSetName: 'voca_high'}
+  {no: 6, title: '초성퀴즈 - 고학년', cardSetName: 'voca_high'},
+  {no: 7, title: '그림책 질문카드', cardSetName: 'book'}
 ];
 
 function App() {
 
-// 카드 제어 관련
-const [isOpen, setIsOpen] = useState(false);
-const [currentCardSet, setCurrentCardSet] = useState(cardSets[0]);
-const [currentCard, setCurrentCard] = useState(null);
+  // 카드 제어 관련
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentCardSet, setCurrentCardSet] = useState(loadStateFromLocalStorage('currentCardSet', cardSets[0]));
+  const [currentCard, setCurrentCard] = useState(null);
 
+  const [selectMode, setSelectMode] = useState(false);
+  const [selectedCards, setSelectedCards] = useState([]);
 
-const [selectMode, setSelectMode] = useState(false);
-const [selectedCards, setSelectedCards] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-const [isModalOpen, setIsModalOpen] = useState(false);
+  // 카드를 눌렀을 때 모달
+  const handleCardDetails = (card) => {
+    playSoundEffect(soundEnabled, "pop");
+    setCurrentCard(card);
+    setIsOpen(true); // 모달 상태를 true로 설정하여 모달을 열어줍니다.
+  };
 
-// 카드를 눌렀을 때 모달
-const handleCardDetails = (card) => {
-  setCurrentCard(card);
-  setIsOpen(true); // 모달 상태를 true로 설정하여 모달을 열어줍니다.
-};
-
-// 덱과 카드셋 관련
+  // 덱과 카드셋 관련
   const [currentDeck, setCurrentDeck] = useState([]);
 
   useEffect(() => {
@@ -44,15 +48,22 @@ const handleCardDetails = (card) => {
     setCurrentDeck(emotionCards);
   }, [currentCardSet]);
 
-// 옵션
-const [soundEnabled, setSoundEnabled] = useState(false);
-const [reinsertCard, setReinsertCard] = useState(false);
-const [drawCount, setDrawCount] = useState(1); // 기본값 1
+  useEffect(() => {
+    if(!isOpen)  {
+      setSelectedCards([]);
+    }
+  }, [isOpen]);
+
+  // 옵션
+  const [soundEnabled, setSoundEnabled] = useState(() => loadStateFromLocalStorage('soundEnabled', false));
+  const [reinsertCard, setReinsertCard] = useState(false);
+  const [drawCount, setDrawCount] = useState(() => loadStateFromLocalStorage('drawCount', 1)); 
 
   const handleSelectCardSet = (event) => {
     const selectedCardSet = cardSets.find(set => set.title === event.target.value);
     if (selectedCardSet) {
       setCurrentCardSet(selectedCardSet);
+      setSelectedCards([]); // 선택한 카드 내용 초기화
     }
   };
 
@@ -65,14 +76,25 @@ const [drawCount, setDrawCount] = useState(1); // 기본값 1
 
   // 랜덤 뽑기 관련
   const handleRandomDraw = () => {
+    // 현재 덱의 복사본을 생성하여 작업합니다.
+    let tempDeck = [...currentDeck];
     const newSelectedCards = [];
-    for (let i = 0; i < drawCount; i++) {
-        const randomIndex = Math.floor(Math.random() * currentDeck.length);
-        const selectedCard = { ...currentDeck[randomIndex], showBack: false };
-        newSelectedCards.push(selectedCard);
-    }
-    setSelectedCards(newSelectedCards); // 상태 업데이트
-    setIsModalOpen(true); // 모달 열기
+
+    // drawCount와 현재 덱의 길이를 비교합니다.
+    const drawLimit = Math.min(drawCount, currentDeck.length);
+
+    for (let i = 0; i < drawLimit; i++) {
+      const randomIndex = Math.floor(Math.random() * tempDeck.length);
+      const selectedCard = { ...tempDeck[randomIndex], showBack: false };
+
+      newSelectedCards.push(selectedCard);
+      // 선택된 카드를 임시 덱에서 제거하여 중복 선택을 방지합니다.
+      tempDeck.splice(randomIndex, 1);
+  }
+
+  setSelectedCards(newSelectedCards); // 상태 업데이트
+  setIsModalOpen(true); // 모달 열기
+  playSoundEffect(soundEnabled, "pop");
 };
 
   // 카드 선택 및 취소 로직
@@ -90,11 +112,11 @@ const [drawCount, setDrawCount] = useState(1); // 기본값 1
             }
         }
     });
-};
-
+  };
 
   const handleShowSelected = () => {
         setIsModalOpen(true); // 모달 열기
+        playSoundEffect(soundEnabled, "pop");
   };
 
   const handleCancelSelected = () => {
@@ -102,28 +124,34 @@ const [drawCount, setDrawCount] = useState(1); // 기본값 1
         setSelectMode(false); // 선택 모드 해제
   };
 
+  useEffect(() => {
+    saveStateToLocalStorage('soundEnabled', soundEnabled);
+    saveStateToLocalStorage('drawCount', drawCount);
+    saveStateToLocalStorage('currentCardSet', currentCardSet);
+  }, [soundEnabled, drawCount, currentCardSet]);
+
   return (
-    <div className="min-h-screen bg-[#f4f6fa] flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-[#D7EBFA] flex flex-col items-center justify-center pb-6">
       <div className='md:flex  flex-wrap  justify-between p-4 w-[70vw]'>
         <div><h1 className="maple-story text-2xl font-bold mb-4">{currentCardSet.title}</h1></div>
         <div className='md:flex'>
           <div className='flex  maple-story items-end mx-4'>
-            <select onChange={handleSelectCardSet} className="min-w-[300px] h-[2.5rem] px-2 rounded-full border border-gray-300">
+            <select value={currentCardSet.title} onChange={handleSelectCardSet} className="min-w-[300px] h-[2.5rem] px-2 rounded-full border border-gray-300">
                   {cardSets.map(set => (
                     <option key={set.no} value={set.title}>{set.title}</option>
                   ))}
             </select>
         </div>
         <div>
-          <div className='flex flex-wrap justify-center maple-story'>
-            <label className='flex flex-wrap  items-center mr-4'>
+          <div className='flex flex-wrap justify-center items-center maple-story'>
+            <label className='flex flex-wrap items-center mr-4 my-auto'>
               소리
               <ToggleSwitch
                 checked={soundEnabled}
                 onChange={() => setSoundEnabled(!soundEnabled)}
               />
             </label>
-            <label className='flex items-center'>
+            <label className='flex items-center my-auto'>
               <input
                 type="number"
                 value={drawCount}
@@ -135,8 +163,8 @@ const [drawCount, setDrawCount] = useState(1); // 기본값 1
               장 뽑기
             </label>
           </div>
-          <div className='flex justify-center'>
-            <label className='flex  lex-wrap items-center'>
+          <div className='flex justify-center hidden'>
+            <label className='maple-story flex flex-wrap items-center'>
               뽑은 카드 다시 넣기
               <ToggleSwitch
                 checked={reinsertCard}
@@ -150,19 +178,19 @@ const [drawCount, setDrawCount] = useState(1); // 기본값 1
     <div className="bg-white py-10 px-10 md:px-20 lg:px-40 rounded-xl shadow-md w-[70vw]">
 
     <div className="flex justify-center mb-4">
-      <button onClick={handleRandomDraw} className="bg-blue-500 maple-story text-white p-2 mx-2 rounded">랜덤뽑기</button>
+      <button onClick={handleRandomDraw} className="bg-[#469CE1] maple-story text-white p-2 mx-2 rounded">랜덤뽑기</button>
       {!selectMode && (
-                    <button onClick={() => setSelectMode(true)} className="bg-blue-500 maple-story text-white p-2 mx-2 rounded">선택뽑기</button>
+                    <button onClick={() => setSelectMode(true)} className="bg-[#469CE1] maple-story text-white p-2 mx-2 rounded">선택뽑기</button>
                 )}
                 {selectMode && (
                     <>
-                        <button onClick={handleShowSelected} className="bg-green-500 maple-story text-white p-2 mx-2 rounded">선택보기</button>
-                        <button onClick={handleCancelSelected} className="bg-red-500 maple-story text-white p-2 mx-2 rounded">선택취소</button>
+                        <button onClick={handleShowSelected} className="bg-[#DAE6AA] text-[#53A347] maple-story text-white p-2 mx-2 rounded">선택보기</button>
+                        <button onClick={handleCancelSelected} className="bg-[#F5DDE7] text-[#DD74A5] maple-story text-white p-2 mx-2 rounded">선택취소</button>
                     </>
       )}
     </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-4">
       {currentDeck.map((card, index) => (
                     <Card
                     key={card.id}
@@ -171,11 +199,12 @@ const [drawCount, setDrawCount] = useState(1); // 기본값 1
                     isSelected={selectedCards.some(selectedCard => selectedCard.id === card.id)}
                     onCardClick={handleCardDetails} 
                     onCheckChange={toggleSelectCard}
+                    soundEnabled={soundEnabled}
                 />
                 ))}
       </div>
       {isOpen && (
-          <Modal isOpen={isOpen} setIsOpen={setIsOpen} card={currentCard}>
+          <Modal isOpen={isOpen} setIsOpen={setIsOpen} card={currentCard} setSelectedCards={setSelectedCards} soundEnabled={soundEnabled}>
                 <button className="bg-white p-3 mx-2 rounded" onClick={(e) => e.stopPropagation()}>뜻 보기</button>
                 <button className="bg-white p-3 mx-2 rounded" onClick={(e) => e.stopPropagation()}>예문 보기</button>
                 <button className="bg-white p-3 mx-2 rounded" onClick={(e) => e.stopPropagation()}>글 쓰기</button>
@@ -184,7 +213,7 @@ const [drawCount, setDrawCount] = useState(1); // 기본값 1
       {isModalOpen && (
     <SelectedModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} deck={selectedCards} />
 )}
-        <p className="text-center text-gray-500">© 2024 카피라이트</p>
+        <p className="text-center text-gray-500">© TEAM</p>
       </div>
     </div>
   );

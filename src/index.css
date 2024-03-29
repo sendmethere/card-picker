@@ -7,6 +7,11 @@
   transition: all 0.3s ease;
 }
 
+.card:hover {
+  transform: scale(1.05); /* 원래 크기보다 5% 커지도록 설정 */
+  cursor: pointer;
+}
+
 .card.open {
   position: fixed;
   top: 50%;

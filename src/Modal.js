@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import playSoundEffect from './Sound';
 
-function Modal({ isOpen, setIsOpen, card }) {
+function Modal({ isOpen, setIsOpen, setSelectedCards, card, soundEnabled}) {
     const [showBack, setShowBack] = useState(false);
     const [shouldRender, setShouldRender] = useState(isOpen);
     const [animation, setAnimation] = useState(""); // 새로운 상태 변수 추가
 
     const toggleCardSide = () => {
         setShowBack(!showBack);
+        playSoundEffect(soundEnabled, "flip");
     };
 
     const closeModal = () => {
     setIsOpen(false);
     setShowBack(false); // 모달을 닫을 때 카드 앞면으로 리셋
+    setSelectedCards([]); // 선택한 카드 내용 초기화
     };
 
     const cardStyle = {
