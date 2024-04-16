@@ -20,8 +20,8 @@ function Modal({ isOpen, setIsOpen, setSelectedCards, card, soundEnabled}) {
     const cardStyle = {
         backgroundImage: `url(${process.env.PUBLIC_URL}/images/${showBack ? card.image_back : card.image_front})`,
         backgroundSize: 'cover',
-        width: `${card.image_size_w*card.zoom_ratio}px`,
-        height: `${card.image_size_h*card.zoom_ratio}px`,
+        width: `${showBack? card.back_image_size_w*card.zoom_ratio : card.front_image_size_w*card.zoom_ratio}px`,
+        height: `${showBack? card.back_image_size_h*card.zoom_ratio : card.front_image_size_h*card.zoom_ratio}px`,
         cursor: 'pointer',
         borderRadius: '10px',
     };
