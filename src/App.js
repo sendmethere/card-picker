@@ -26,7 +26,6 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentCardSet, setCurrentCardSet] = useState(loadStateFromLocalStorage('currentCardSet', cardSets[0]));
   const [currentCard, setCurrentCard] = useState(null);
-  const [showBackInList, setShowBackInList] = useState(true);
 
   const [selectMode, setSelectMode] = useState(false);
   const [selectedCards, setSelectedCards] = useState([]);
@@ -55,9 +54,10 @@ function App() {
   }, [isOpen]);
 
   // 옵션
-  const [soundEnabled, setSoundEnabled] = useState(() => loadStateFromLocalStorage('soundEnabled', false));
+  const [soundEnabled, setSoundEnabled] = useState(() => loadStateFromLocalStorage('soundEnabled', true));
   const [reinsertCard, setReinsertCard] = useState(false);
   const [drawCount, setDrawCount] = useState(() => loadStateFromLocalStorage('drawCount', 1)); 
+  const [showBackInList, setShowBackInList] = useState(() => loadStateFromLocalStorage('showBackInList', false));
 
   const handleSelectCardSet = (event) => {
     const selectedCardSet = cardSets.find(set => set.title === event.target.value);
@@ -128,7 +128,8 @@ function App() {
     saveStateToLocalStorage('soundEnabled', soundEnabled);
     saveStateToLocalStorage('drawCount', drawCount);
     saveStateToLocalStorage('currentCardSet', currentCardSet);
-  }, [soundEnabled, drawCount, currentCardSet]);
+    saveStateToLocalStorage('showBackInList', showBackInList);
+  }, [soundEnabled, drawCount, currentCardSet, showBackInList]);
 
   return (
     <div className="min-h-screen bg-[#D7EBFA] flex flex-col items-center justify-center pb-6">
