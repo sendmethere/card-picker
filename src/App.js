@@ -13,12 +13,11 @@ import {loadStateFromLocalStorage, saveStateToLocalStorage} from './Local';
 
 const cardSets = [
   {no: 1, title: '마음을 열어주는 감정카드', cardSetName: 'emotion'},
-  {no: 2, title: '가치카드 - 나', cardSetName: 'value_self'},
-  {no: 3, title: '가치카드 - 공동체', cardSetName: 'value_community'},
-  {no: 4, title: '가치카드 - 우리', cardSetName: 'value_we'},
-  {no: 5, title: '낱말카드', cardSetName: 'words'},
-  {no: 6, title: '초성퀴즈 - 고학년', cardSetName: 'voca_high'},
-  {no: 7, title: '그림책 질문카드', cardSetName: 'book'}
+  {no: 2, title: '가치카드 - 나', cardSetName: 'value'},
+  {no: 3, title: '낱말카드', cardSetName: 'words'},
+  {no: 4, title: '초성퀴즈 - 고학년', cardSetName: 'voca_high'},
+  {no: 5, title: '그림책 질문카드', cardSetName: 'picture_book'},
+  {no: 6, title: '독서질문카드', cardSetName: 'book'}
 ];
 
 function App() {
