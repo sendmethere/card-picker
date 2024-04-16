@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import playSoundEffect from './Sound';
 
-function Modal({ isOpen, setIsOpen, setSelectedCards, card, soundEnabled}) {
-    const [showBack, setShowBack] = useState(false);
+function Modal({ isOpen, setIsOpen, setSelectedCards, card, soundEnabled, showBackInList}) {
+    const [showBack, setShowBack] = useState(showBackInList);
     const [shouldRender, setShouldRender] = useState(isOpen);
     const [animation, setAnimation] = useState(""); // 새로운 상태 변수 추가
 
@@ -16,6 +16,7 @@ function Modal({ isOpen, setIsOpen, setSelectedCards, card, soundEnabled}) {
     setShowBack(false); // 모달을 닫을 때 카드 앞면으로 리셋
     setSelectedCards([]); // 선택한 카드 내용 초기화
     };
+
 
     const cardStyle = {
         backgroundImage: `url(${process.env.PUBLIC_URL}/images/${showBack ? card.image_back : card.image_front})`,

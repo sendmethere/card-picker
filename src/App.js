@@ -13,7 +13,7 @@ import {loadStateFromLocalStorage, saveStateToLocalStorage} from './Local';
 
 const cardSets = [
   {no: 1, title: '마음을 열어주는 감정카드', cardSetName: 'emotion'},
-  {no: 2, title: '가치카드 - 나', cardSetName: 'value'},
+  {no: 2, title: '가치카드', cardSetName: 'value'},
   {no: 3, title: '낱말카드', cardSetName: 'words'},
   {no: 4, title: '초성퀴즈 - 고학년', cardSetName: 'voca_high'},
   {no: 5, title: '그림책 질문카드', cardSetName: 'picture_book'},
@@ -26,6 +26,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentCardSet, setCurrentCardSet] = useState(loadStateFromLocalStorage('currentCardSet', cardSets[0]));
   const [currentCard, setCurrentCard] = useState(null);
+  const [showBackInList, setShowBackInList] = useState(true);
 
   const [selectMode, setSelectMode] = useState(false);
   const [selectedCards, setSelectedCards] = useState([]);
@@ -33,7 +34,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // 카드를 눌렀을 때 모달
-  const handleCardDetails = (card) => {
+  const handleCardDetails = (card, showBackInList) => {
     playSoundEffect(soundEnabled, "pop");
     setCurrentCard(card);
     setIsOpen(true); // 모달 상태를 true로 설정하여 모달을 열어줍니다.
@@ -144,11 +145,12 @@ function App() {
         <div>
           <div className='flex flex-wrap justify-center items-center maple-story'>
             <label className='flex flex-wrap items-center mr-4 my-auto'>
-              소리
+              앞면
               <ToggleSwitch
-                checked={soundEnabled}
-                onChange={() => setSoundEnabled(!soundEnabled)}
+                checked={showBackInList}
+                onChange={() => setShowBackInList(!showBackInList)}
               />
+              뒷면
             </label>
             <label className='flex items-center my-auto'>
               <input
@@ -199,11 +201,12 @@ function App() {
                     onCardClick={handleCardDetails} 
                     onCheckChange={toggleSelectCard}
                     soundEnabled={soundEnabled}
+                    showBackInList={showBackInList}
                 />
                 ))}
       </div>
       {isOpen && (
-          <Modal isOpen={isOpen} setIsOpen={setIsOpen} card={currentCard} setSelectedCards={setSelectedCards} soundEnabled={soundEnabled}>
+          <Modal isOpen={isOpen} setIsOpen={setIsOpen} card={currentCard} setSelectedCards={setSelectedCards} soundEnabled={soundEnabled} showBackInList={showBackInList}>
                 <button className="bg-white p-3 mx-2 rounded" onClick={(e) => e.stopPropagation()}>뜻 보기</button>
                 <button className="bg-white p-3 mx-2 rounded" onClick={(e) => e.stopPropagation()}>예문 보기</button>
                 <button className="bg-white p-3 mx-2 rounded" onClick={(e) => e.stopPropagation()}>글 쓰기</button>

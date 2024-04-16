@@ -2,7 +2,7 @@
 import React from 'react';
 import playSoundEffect from './Sound';
 
-function Card({ card, selectMode, isSelected, onCheckChange, onCardClick, soundEnabled }) {
+function Card({ card, selectMode, isSelected, onCheckChange, onCardClick, soundEnabled, showBackInList }) {
     
     const handleCheckboxClick = (e) => {
         e.stopPropagation(); // 이벤트 버블링을 중지합니다.
@@ -18,13 +18,13 @@ function Card({ card, selectMode, isSelected, onCheckChange, onCardClick, soundE
             onCheckChange(card.id); // 선택 모드일 때 카드 선택 상태 토글
             playSoundEffect(soundEnabled, "click");
         } else {
-            onCardClick(card); // 선택 모드가 아닐 때 카드 클릭 동작 처리
+            onCardClick(card, showBackInList); // 선택 모드가 아닐 때 카드 클릭 동작 처리
         }
     };
 
     return (
         <div className={`card ${isSelected ? 'selected' : ''}`} onClick={handleCardClick}>
-            <img src={`${process.env.PUBLIC_URL}/images/${card.image_front}`} 
+            <img src={`${process.env.PUBLIC_URL}/images/${showBackInList? card.image_back : card.image_front}`} 
                 alt="Card" 
                 style={{ 
                     width: card.rotate ? '80%' : '100%',
