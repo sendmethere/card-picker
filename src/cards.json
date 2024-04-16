@@ -3038,10 +3038,10 @@
         "cardSet": "book",
         "image_front": "book_front_1.jpg",
         "image_back": "book_back_1.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3053,10 +3053,10 @@
         "cardSet": "book",
         "image_front": "book_front_2.jpg",
         "image_back": "book_back_2.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3068,10 +3068,10 @@
         "cardSet": "book",
         "image_front": "book_front_3.jpg",
         "image_back": "book_back_3.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3083,10 +3083,10 @@
         "cardSet": "book",
         "image_front": "book_front_4.jpg",
         "image_back": "book_back_4.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3098,10 +3098,10 @@
         "cardSet": "book",
         "image_front": "book_front_5.jpg",
         "image_back": "book_back_5.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3113,10 +3113,10 @@
         "cardSet": "book",
         "image_front": "book_front_6.jpg",
         "image_back": "book_back_6.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3128,10 +3128,10 @@
         "cardSet": "book",
         "image_front": "book_front_7.jpg",
         "image_back": "book_back_7.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3143,10 +3143,10 @@
         "cardSet": "book",
         "image_front": "book_front_8.jpg",
         "image_back": "book_back_8.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3158,10 +3158,10 @@
         "cardSet": "book",
         "image_front": "book_front_9.jpg",
         "image_back": "book_back_9.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3173,10 +3173,10 @@
         "cardSet": "book",
         "image_front": "book_front_10.jpg",
         "image_back": "book_back_10.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3188,10 +3188,10 @@
         "cardSet": "book",
         "image_front": "book_front_11.jpg",
         "image_back": "book_back_11.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3203,10 +3203,10 @@
         "cardSet": "book",
         "image_front": "book_front_12.jpg",
         "image_back": "book_back_12.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3218,10 +3218,10 @@
         "cardSet": "book",
         "image_front": "book_front_13.jpg",
         "image_back": "book_back_13.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3233,10 +3233,10 @@
         "cardSet": "book",
         "image_front": "book_front_14.jpg",
         "image_back": "book_back_14.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3248,10 +3248,10 @@
         "cardSet": "book",
         "image_front": "book_front_15.jpg",
         "image_back": "book_back_15.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3263,10 +3263,10 @@
         "cardSet": "book",
         "image_front": "book_front_16.jpg",
         "image_back": "book_back_16.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3278,10 +3278,10 @@
         "cardSet": "book",
         "image_front": "book_front_17.jpg",
         "image_back": "book_back_17.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3293,10 +3293,10 @@
         "cardSet": "book",
         "image_front": "book_front_18.jpg",
         "image_back": "book_back_18.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3308,10 +3308,10 @@
         "cardSet": "book",
         "image_front": "book_front_19.jpg",
         "image_back": "book_back_19.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3323,10 +3323,10 @@
         "cardSet": "book",
         "image_front": "book_front_20.jpg",
         "image_back": "book_back_20.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3338,10 +3338,10 @@
         "cardSet": "book",
         "image_front": "book_front_21.jpg",
         "image_back": "book_back_21.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3353,10 +3353,10 @@
         "cardSet": "book",
         "image_front": "book_front_22.jpg",
         "image_back": "book_back_22.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3368,10 +3368,10 @@
         "cardSet": "book",
         "image_front": "book_front_23.jpg",
         "image_back": "book_back_23.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3383,10 +3383,10 @@
         "cardSet": "book",
         "image_front": "book_front_24.jpg",
         "image_back": "book_back_24.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3398,10 +3398,10 @@
         "cardSet": "book",
         "image_front": "book_front_25.jpg",
         "image_back": "book_back_25.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3413,10 +3413,10 @@
         "cardSet": "book",
         "image_front": "book_front_26.jpg",
         "image_back": "book_back_26.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3428,10 +3428,10 @@
         "cardSet": "book",
         "image_front": "book_front_27.jpg",
         "image_back": "book_back_27.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3443,10 +3443,10 @@
         "cardSet": "book",
         "image_front": "book_front_28.jpg",
         "image_back": "book_back_28.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3458,10 +3458,10 @@
         "cardSet": "book",
         "image_front": "book_front_29.jpg",
         "image_back": "book_back_29.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3473,10 +3473,10 @@
         "cardSet": "book",
         "image_front": "book_front_30.jpg",
         "image_back": "book_back_30.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3488,10 +3488,10 @@
         "cardSet": "book",
         "image_front": "book_front_31.jpg",
         "image_back": "book_back_31.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3503,10 +3503,10 @@
         "cardSet": "book",
         "image_front": "book_front_32.jpg",
         "image_back": "book_back_32.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3518,10 +3518,10 @@
         "cardSet": "book",
         "image_front": "book_front_33.jpg",
         "image_back": "book_back_33.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3533,10 +3533,10 @@
         "cardSet": "book",
         "image_front": "book_front_34.jpg",
         "image_back": "book_back_34.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3548,10 +3548,10 @@
         "cardSet": "book",
         "image_front": "book_front_35.jpg",
         "image_back": "book_back_35.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3563,10 +3563,10 @@
         "cardSet": "book",
         "image_front": "book_front_36.jpg",
         "image_back": "book_back_36.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3578,10 +3578,10 @@
         "cardSet": "book",
         "image_front": "book_front_37.jpg",
         "image_back": "book_back_37.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3593,10 +3593,10 @@
         "cardSet": "book",
         "image_front": "book_front_38.jpg",
         "image_back": "book_back_38.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3608,10 +3608,10 @@
         "cardSet": "book",
         "image_front": "book_front_39.jpg",
         "image_back": "book_back_39.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3623,10 +3623,10 @@
         "cardSet": "book",
         "image_front": "book_front_40.jpg",
         "image_back": "book_back_40.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3638,10 +3638,10 @@
         "cardSet": "book",
         "image_front": "book_front_41.jpg",
         "image_back": "book_back_41.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3653,10 +3653,10 @@
         "cardSet": "book",
         "image_front": "book_front_42.jpg",
         "image_back": "book_back_42.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3668,10 +3668,10 @@
         "cardSet": "book",
         "image_front": "book_front_43.jpg",
         "image_back": "book_back_43.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3683,10 +3683,10 @@
         "cardSet": "book",
         "image_front": "book_front_44.jpg",
         "image_back": "book_back_44.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3698,10 +3698,10 @@
         "cardSet": "book",
         "image_front": "book_front_45.jpg",
         "image_back": "book_back_45.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3713,10 +3713,10 @@
         "cardSet": "book",
         "image_front": "book_front_46.jpg",
         "image_back": "book_back_46.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3728,10 +3728,10 @@
         "cardSet": "book",
         "image_front": "book_front_47.jpg",
         "image_back": "book_back_47.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3743,10 +3743,10 @@
         "cardSet": "book",
         "image_front": "book_front_48.jpg",
         "image_back": "book_back_48.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3758,10 +3758,10 @@
         "cardSet": "book",
         "image_front": "book_front_49.jpg",
         "image_back": "book_back_49.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3773,10 +3773,10 @@
         "cardSet": "book",
         "image_front": "book_front_50.jpg",
         "image_back": "book_back_50.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3788,10 +3788,10 @@
         "cardSet": "book",
         "image_front": "book_front_51.jpg",
         "image_back": "book_back_51.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     },
     {
@@ -3803,10 +3803,10 @@
         "cardSet": "book",
         "image_front": "book_front_52.jpg",
         "image_back": "book_back_52.jpg",
-        "front_image_size_w": "230",
+        "front_image_size_w": "280",
         "front_image_size_h": "192",
         "back_image_size_w": "192",
-        "back_image_size_h": "230",
+        "back_image_size_h": "280",
         "zoom_ratio": "2"
     }
 ]
